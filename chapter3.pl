@@ -55,3 +55,28 @@ hairy(claude).
 grumpy_and_hairy(X) :-
   grumpy(X),
   hairy(X).
+
+
+% 4. No F is G; some G are H; so, some H are not F.
+% 
+% No (F) french is (G) german. Some (G) germans are (H) honest; so, some
+% (H) honest people are not (F) french.
+%
+% Valid.
+
+german(gunther).
+german(fritz).
+german(helga).
+german(ursula).
+german(ingrid).
+
+honest(pierre).
+honest(claude).
+honest(gunther).
+honest(helga).
+honest(ursula).
+honest(ingrid).
+
+honest_people(X) :-
+  honest(X),
+  \+ french(X).
